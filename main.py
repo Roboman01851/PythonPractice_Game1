@@ -36,11 +36,13 @@ def startProgram():
 
         game_window.fill((0,0,0))
 
+        generateStars(25)
+
         button_pressed = pygame.key.get_pressed()
         mouseChords = pygame.mouse.get_pos()
         mouseButtonStates = pygame.mouse.get_pressed(num_buttons=3)
 
-        generateStars(100)
+
 
         printControls(f"Up Arrow: Increase Vertex Count", 1, settings.size_of_font)
         printControls(f"Down Arrow: Decrease Vertex Count", 2, settings.size_of_font)
