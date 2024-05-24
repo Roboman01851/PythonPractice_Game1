@@ -65,13 +65,7 @@ def startProgram():
             for i in range(vertex_count)
         ]
 
-
         pygame.draw.polygon(game_window, shape_color, vertices)
-
-
-
-
-
 
         ## Increase Vertex Count
         if vertex_count >= vertex_min and vertex_count < vertex_max:
@@ -126,10 +120,6 @@ def startProgram():
         if button_pressed[pygame.K_3]:
             if shape_color[2] < 255 and shape_color[2] >= 30:
                 shape_color[2] += 1
-
-
-
-
 
         # [30,30,30] to [255,255,255]
 
