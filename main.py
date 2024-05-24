@@ -40,6 +40,7 @@ def startProgram():
         mouseChords = pygame.mouse.get_pos()
         mouseButtonStates = pygame.mouse.get_pressed(num_buttons=3)
 
+        generateStars(100)
 
         printControls(f"Up Arrow: Increase Vertex Count", 1, settings.size_of_font)
         printControls(f"Down Arrow: Decrease Vertex Count", 2, settings.size_of_font)
@@ -155,8 +156,11 @@ def printSats(text, line, font_size):
     game_window.blit(input, inputRect)
 
 def generateStars(amount):
-    for i in amount:
-        pass
+
+    for i in range(amount):
+        pygame.draw.circle(game_window, [255, 255, 255], [random.randint(0, settings.width), random.randint(0, settings.height)], 2)
+
+
 
 if __name__ == '__main__':
     startProgram()
